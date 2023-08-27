@@ -40,11 +40,11 @@ function addGamesToPage(games) {
         // about each game
         //format: gameCard.innerHTML = (`${}`)
         const gameInfo = `
-        <img class=“game-img” src=“${ games.img }” alt=“${games.name}“>
-        <h2>${games.name}</h2>
-        <p>${games.description}</p>
-        <p>Pledged: $${games.pledged}</p>
-        <p>Backers: ${games.backers}</p>`;
+        <img class=“game-img” img src="${game.img}" alt="${game.name} Image" width="300" height="150">
+        <h2>${game.name}</h2>
+        <p>${game.description}</p>
+        <p>Pledged: $${game.pledged}</p>
+        <p>Backers: ${game.backers}</p>`;
 
         gameCard.innerHTML = gameInfo
         // TIP: if your images are not displaying, make sure there is space
