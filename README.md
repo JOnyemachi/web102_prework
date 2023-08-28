@@ -25,7 +25,6 @@ https://github.com/JOnyemachi/web102_prework/assets/60332952/d709a4c6-92a6-4b0f-
 
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
