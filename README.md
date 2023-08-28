@@ -23,6 +23,12 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
+
+
+https://github.com/JOnyemachi/web102_prework/assets/60332952/d709a4c6-92a6-4b0f-876f-a7c93b9c2b73
+
+
+
 <img src='https://i.imgur.com/YLHOF7o.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
