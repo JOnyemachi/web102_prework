@@ -5,6 +5,7 @@
 */
 
 // import the JSON data about the crowd funded games from the games.js file
+import games from './games.js';
 import GAMES_DATA from './games.js';
 
 // create a list of objects to store the data about the games using JSON.parse
@@ -76,19 +77,23 @@ console.log(addGamesToPage(GAMES_JSON))
 const contributionsCard = document.getElementById("num-contributions");
 
 // use reduce() to count the number of total contributions by summing the backers
-
+const backers = GAMES_JSON.reduce((acc, property) => { return acc + property.backers },0);
 
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
-
+document.getElementById('num-contributions').innerHTML = (backers).toLocaleString('en-US');
 
 // grab the amount raised card, then use reduce() to find the total amount raised
+const raised = GAMES_JSON.reduce((acc, property) => { return acc + property.pledged },0);
+
 const raisedCard = document.getElementById("total-raised");
 
 // set inner HTML using template literal
-
+raisedCard.innerHTML = `$${(raised).toLocaleString('en-US')}`;
 
 // grab number of games card and set its inner HTML
-const gamesCard = document.getElementById("num-games");
+const numGames = GAMES_JSON.length;
+const card = document.getElementById("num-games");
+card.innerHTML = (numGames).toLocaleString('en-US');
 
 
 /*************************************************************************************

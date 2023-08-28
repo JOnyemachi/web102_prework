@@ -23,7 +23,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    background-color: rgb(145, 145, 213);
+    background-color: rgba(65, 128, 157, 0.854);
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
 }
