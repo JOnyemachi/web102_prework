@@ -106,10 +106,23 @@ card.innerHTML = (numGames).toLocaleString('en-US');
 function filterUnfundedOnly() {
     deleteChildElements(gamesContainer);
 
+    // grab unfunded button element
     // use filter() to get a list of games that have not yet met their goal
+    // i.e: amount raised (pledged) < goal amount.
 
-
+        /* EXAMPLE:
+            let listOfIncreasedSongs = songs.filter ( (song) => {
+            return song.playsIn2022 > song.playsIn2021;
+            });
+        */
+                
+    let isUnfunded = GAMES_JSON.filter ( (property) => {
+        return property.pledged < property.goal;
+        });
+    
     // use the function we previously created to add the unfunded games to the DOM
+    console.log(addGamesToPage(isUnfunded))
+
 
 }
 
@@ -118,9 +131,12 @@ function filterFundedOnly() {
     deleteChildElements(gamesContainer);
 
     // use filter() to get a list of games that have met or exceeded their goal
-
+    let isFunded = GAMES_JSON.filter ( (property) => {
+        return property.pledged > property.goal;
+        });
 
     // use the function we previously created to add unfunded games to the DOM
+    console.log(addGamesToPage(isFunded))
 
 }
 
@@ -129,6 +145,8 @@ function showAllGames() {
     deleteChildElements(gamesContainer);
 
     // add all games from the JSON data to the DOM
+    const allGames = GAMES_JSON.reduce((acc, property) => { return acc + property.pledged },0);
+    console.log(addGamesToPage(GAMES_JSON))
 
 }
 
@@ -138,6 +156,11 @@ const fundedBtn = document.getElementById("funded-btn");
 const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
+document.getElementById("unfunded-btn").addEventListener("click",filterUnfundedOnly);
+document.getElementById("funded-btn").addEventListener("click",filterFundedOnly);
+document.getElementById("all-btn").addEventListener("click",showAllGames);
+
+
 
 
 /*************************************************************************************
