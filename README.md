@@ -21,9 +21,6 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented features:
-
-
 
 https://github.com/JOnyemachi/web102_prework/assets/60332952/d709a4c6-92a6-4b0f-876f-a7c93b9c2b73
 
